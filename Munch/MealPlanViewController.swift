@@ -5,11 +5,12 @@
 //  Created by Samuel Alake on 4/2/22.
 //
 
-import Foundation
-import ResearchKit
 import CareKit
 import CareKitStore
 import CareKitUI
+import ResearchKit
+import UIKit
+import os.log
 
 class MealPlanViewController: OCKDailyPageViewController, OCKSurveyTaskViewControllerDelegate{
     
@@ -54,7 +55,7 @@ class MealPlanViewController: OCKDailyPageViewController, OCKSurveyTaskViewContr
             reload()
         }
     }
-    
+
     func surveyTask(
         viewController: OCKSurveyTaskViewController,
         shouldAllowDeletingOutcomeForEvent event: OCKAnyEvent) -> Bool {
@@ -98,10 +99,10 @@ class MealPlanViewController: OCKDailyPageViewController, OCKSurveyTaskViewContr
                 task: task,
                 eventQuery: OCKEventQuery(for: date),
                 storeManager: storeManager,
-                survey: Surveys.cookingMode(),
+                survey: Surveys.addRecipe(),
+                viewSynchronizer: SurveyViewSynchronizer(),
                 extractOutcome: { _ in [OCKOutcomeValue(Date())] }
             )
-            //survey.taskView.completionButton.label.text = "Cook Now"
 
             return survey
 
@@ -113,20 +114,12 @@ class MealPlanViewController: OCKDailyPageViewController, OCKSurveyTaskViewContr
 }
 
 final class SurveyViewSynchronizer: OCKSurveyTaskViewSynchronizer {
-
-    override func makeView() -> OCKInstructionsTaskView {
-            let instructionsView = super.makeView()
-            instructionsView.completionButton.label.text = "Start"
-            return instructionsView
-    }
     
     override func updateView(
         _ view: OCKInstructionsTaskView,
         context: OCKSynchronizationContext<OCKTaskEvents>) {
 
         super.updateView(view, context: context)
-            
-            //view.completionButton.label.text = "Cook Now"
 
         if let event = context.viewModel.first?.first, event.outcome != nil {
 //            view.instructionsLabel.isHidden = false

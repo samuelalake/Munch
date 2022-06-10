@@ -15,6 +15,48 @@ struct Surveys {
 
     private init() {}
 
+    // MARK: Add Recipe Form
+    static func addRecipe() -> ORKTask{
+        var recipeSteps: [ORKStep] = []
+        
+        let imageUploadStep = ORKImageCaptureStep(identifier: "add.image")
+        recipeSteps += [imageUploadStep]
+
+        let titleAnswerFormat = ORKAnswerFormat.textAnswerFormat()
+        titleAnswerFormat.placeholder = "recipe title"
+        
+        let titleItem = ORKFormItem(identifier: "recipeTitle", text: "Title", answerFormat: titleAnswerFormat)
+        
+        let descriptionAnswerFormat = ORKAnswerFormat.textAnswerFormat()
+        descriptionAnswerFormat.placeholder = "description"
+        descriptionAnswerFormat.multipleLines = true
+        
+        let descriptionItem = ORKFormItem(identifier: "recipeDescription", text: "Description", answerFormat: descriptionAnswerFormat)
+        
+        let ingredientAnswerFormat = ORKAnswerFormat.textAnswerFormat()
+        ingredientAnswerFormat.placeholder = "ingredient"
+        ingredientAnswerFormat.multipleLines = true
+        
+        let ingredientItem = ORKFormItem(identifier: "recipeIngredients", text: "Ingredient", answerFormat: ingredientAnswerFormat)
+        
+        let instructionsAnswerFormat = ORKAnswerFormat.textAnswerFormat()
+        instructionsAnswerFormat.placeholder = "instructions"
+        instructionsAnswerFormat.multipleLines = true
+        
+        let instructionsItem = ORKFormItem(identifier: "recipeInstructions", text: "Instructions", answerFormat: instructionsAnswerFormat)
+        
+        let recipeInfoStep = ORKFormStep(identifier: "add.recipeInfo", title: "Add recipe information", text: "Include recipe details")
+        
+        recipeInfoStep.formItems = [titleItem, descriptionItem, ingredientItem, instructionsItem]
+        recipeInfoStep.isOptional = false
+        
+        let addRecipeTask = ORKOrderedTask(identifier: "addRecipeTask", steps: [imageUploadStep, recipeInfoStep])
+        
+        return addRecipeTask
+        
+        //event.answer(kind: checkInIdentifier)
+    }
+    
     // MARK: Onboarding
 
     // 1.4 Construct an ORKTask for onboarding
@@ -63,6 +105,9 @@ struct Surveys {
         completionStep.title = "Cooking Complete"
         completionStep.text = "Thanks for cooking!"
         
+        
+        //let uploadImage = ORKImageCaptureStep(identifier: "image") (important to remember)
+        
         /* **************************************************************
         * Create an array with the steps to show the user
         **************************************************************/
@@ -86,36 +131,75 @@ struct Surveys {
         return orderedTask
     }
     
-    // MARK: 3D Knee Model
+        static let checkInIdentifier = "checkin"
+        static let checkInFormIdentifier = "checkin.form"
+        static let checkInPainItemIdentifier = "checkin.form.pain"
+        static let checkInSleepItemIdentifier = "checkin.form.sleep"
+
+        static func checkInSurvey() -> ORKTask {
+
+            let painAnswerFormat = ORKAnswerFormat.scale(
+                withMaximumValue: 10,
+                minimumValue: 1,
+                defaultValue: 0,
+                step: 1,
+                vertical: false,
+                maximumValueDescription: "Very painful",
+                minimumValueDescription: "No pain"
+            )
+
+            let sleepAnswerFormat = ORKAnswerFormat.scale(
+                withMaximumValue: 12,
+                minimumValue: 0,
+                defaultValue: 0,
+                step: 1,
+                vertical: false,
+                maximumValueDescription: nil,
+                minimumValueDescription: nil
+            )
+
+            let painItem = ORKFormItem(
+                identifier: checkInPainItemIdentifier,
+                text: "How would you rate your pain?",
+                answerFormat: painAnswerFormat
+            )
+            painItem.isOptional = false
+
+            let sleepItem = ORKFormItem(
+                identifier: checkInSleepItemIdentifier,
+                text: "How many hours of sleep did you get last night?",
+                answerFormat: sleepAnswerFormat
+            )
+            sleepItem.isOptional = false
+
+            let formStep = ORKFormStep(
+                identifier: checkInFormIdentifier,
+                title: "Check In",
+                text: "Please answer the following questions."
+            )
+            formStep.formItems = [painItem, sleepItem]
+            formStep.isOptional = false
+
+            let surveyTask = ORKOrderedTask(
+                identifier: checkInIdentifier,
+                steps: [formStep]
+            )
+
+            return surveyTask
+        }
     
-    static func kneeModel() -> ORKTask {
-
-        let instructionStep = ORKInstructionStep(
-            identifier: "insights.instructionStep"
-        )
-        instructionStep.title = "Your Injury Visualized"
-        instructionStep.detailText = "A 3D model will be presented to give you better insights on your specific injury."
-        instructionStep.iconImage = UIImage(systemName: "bandage")
-
-        let modelManager = ORKUSDZModelManager(usdzFileName: "toy_robot_vintage")
-
-        let kneeModelStep = ORK3DModelStep(
-            identifier: "insights.kneeModel",
-            modelManager: modelManager
-        )
-
-        let kneeModelTask = ORKOrderedTask(
-            identifier: "insights",
-            steps: [instructionStep, kneeModelStep]
-        )
-
-        return kneeModelTask
-    }
     
     static func recipeDetailView() -> OCKDetailViewController {
         let recipeView = OCKDetailViewController(html: nil, imageOverlayStyle: .dark, showsCloseButton: true)
         recipeView.detailView.imageView.image = UIImage(named: "wonton")
+        //recipeView.detailView.contentStackView =
+        
+        let label = OCKLabel(textStyle: .body, weight: .bold)
+        label.text = "Hello"
+        
+        recipeView.detailView.bodyLabel.text = "Hello"
         return recipeView
+        
     }
 
     

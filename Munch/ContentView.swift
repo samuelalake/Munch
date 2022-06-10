@@ -19,6 +19,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("Meal Plan", systemImage: "calendar")
                 }
+            
+            GroceryViewControllerRepresentable()
+                .tabItem{
+                    Label("Grocery", systemImage: "leaf")
+                }
         }
     }
 }

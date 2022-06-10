@@ -10,7 +10,7 @@ import CareKit
 import CareKitUI
 import ResearchKit
 
-class RecipesViewController: OCKListViewController, OCKFeaturedContentViewDelegate, ORKTaskViewControllerDelegate {
+class RecipesViewController: OCKListViewController, OCKFeaturedContentViewDelegate/*, ORKTaskViewControllerDelegate*/ {
     
     let storeManager: OCKSynchronizedStoreManager
 
@@ -24,18 +24,9 @@ class RecipesViewController: OCKListViewController, OCKFeaturedContentViewDelega
     }
     
     func didTapView(_ view: OCKFeaturedContentView) {
-        let humanModelTask = Surveys.kneeModel()
-
-        let taskViewController = ORKTaskViewController(
-            task: humanModelTask,
-            taskRun: nil
-        )
         
-        let detailViewController = Surveys.recipeDetailView()/*Surveys.recipeDetailView()*/
-
-        taskViewController.delegate = self
+        let detailViewController = Surveys.recipeDetailView()
         
-        //present(taskViewController, animated: true, completion: nil)
         present(detailViewController, animated: true, completion: nil)
     }
     
@@ -55,19 +46,13 @@ class RecipesViewController: OCKListViewController, OCKFeaturedContentViewDelega
     }
     
     // MARK: ORKTaskViewControllerDelegate
-
-    func taskViewController(
-        _ taskViewController: ORKTaskViewController,
-        didFinishWith reason: ORKTaskViewControllerFinishReason,
-        error: Error?) {
-
-        taskViewController.dismiss(animated: true, completion: nil)
-    }
+//
+//    func taskViewController(
+//        _ taskViewController: ORKTaskViewController,
+//        didFinishWith reason: ORKTaskViewControllerFinishReason,
+//        error: Error?) {
+//
+//        taskViewController.dismiss(animated: true, completion: nil)
+//    }
 
 }
-
-//struct RecipesView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RecipesViewController()
-//    }
-//}

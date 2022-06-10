@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77008F8828504F1D00185D68 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77008F8728504F1D00185D68 /* Tasks.swift */; };
+		77008F8A28504FFC00185D68 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77008F8928504FFC00185D68 /* Logger.swift */; };
+		77008F9528505D0C00185D68 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77008F9428505D0C00185D68 /* StoreModel.swift */; };
+		7724420E28518A000029B578 /* GroceryViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7724420D28518A000029B578 /* GroceryViewControllerRepresentable.swift */; };
+		7724421328518A5B0029B578 /* GroceryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7724421228518A5A0029B578 /* GroceryViewController.swift */; };
 		772C7FF027F8884300EA82F0 /* Munch_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C7FEF27F8884300EA82F0 /* Munch_App.swift */; };
 		772C7FF227F8884300EA82F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C7FF127F8884300EA82F0 /* ContentView.swift */; };
 		772C7FF427F8884400EA82F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 772C7FF327F8884400EA82F0 /* Assets.xcassets */; };
@@ -23,17 +28,16 @@
 		772C801D27F88B4B00EA82F0 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 772C800C27F88AA600EA82F0 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		772C802727F88C2F00EA82F0 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C802027F88C2F00EA82F0 /* OnboardingViewController.swift */; };
 		772C802827F88C2F00EA82F0 /* OnboardingViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C802427F88C2F00EA82F0 /* OnboardingViewCoordinator.swift */; };
-		772C802A27F88C2F00EA82F0 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C802627F88C2F00EA82F0 /* SurveyViewController.swift */; };
+		772C802A27F88C2F00EA82F0 /* SurveyViewController-Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C802627F88C2F00EA82F0 /* SurveyViewController-Deprecated.swift */; };
 		772C802C27F88FD300EA82F0 /* CookingModeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C802B27F88FD300EA82F0 /* CookingModeCoordinator.swift */; };
 		772C802E27F8900B00EA82F0 /* CookingModeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C802D27F8900B00EA82F0 /* CookingModeController.swift */; };
 		772C803127F896E100EA82F0 /* CareFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C803027F896E100EA82F0 /* CareFeedViewController.swift */; };
-		772C803427F8979A00EA82F0 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C803327F8979A00EA82F0 /* Tasks.swift */; };
 		772C803627F898C700EA82F0 /* Surveys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C803527F898C700EA82F0 /* Surveys.swift */; };
-		772C803827F89A4900EA82F0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C803727F89A4900EA82F0 /* Logger.swift */; };
 		772C803A27F8A09500EA82F0 /* MealPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C803927F8A09500EA82F0 /* MealPlanViewController.swift */; };
 		772C803C27F8A28600EA82F0 /* MealPlanViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C803B27F8A28600EA82F0 /* MealPlanViewControllerRepresentable.swift */; };
 		772C804027F8D19400EA82F0 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C803F27F8D19400EA82F0 /* RecipesViewController.swift */; };
 		772C804427F9133E00EA82F0 /* RecipesViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C804327F9133E00EA82F0 /* RecipesViewControllerRepresentable.swift */; };
+		7744F76328001C56000DD45A /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744F76228001C56000DD45A /* SurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		77008F8728504F1D00185D68 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		77008F8928504FFC00185D68 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		77008F9428505D0C00185D68 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		7724420D28518A000029B578 /* GroceryViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		7724421228518A5A0029B578 /* GroceryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryViewController.swift; sourceTree = "<group>"; };
 		772C7FEC27F8884300EA82F0 /* Munch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Munch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		772C7FEF27F8884300EA82F0 /* Munch_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Munch_App.swift; sourceTree = "<group>"; };
 		772C7FF127F8884300EA82F0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,17 +90,16 @@
 		772C801227F88B3900EA82F0 /* CareKit-2-2.1-slider */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "CareKit-2-2.1-slider"; sourceTree = "<group>"; };
 		772C802027F88C2F00EA82F0 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		772C802427F88C2F00EA82F0 /* OnboardingViewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewCoordinator.swift; sourceTree = "<group>"; };
-		772C802627F88C2F00EA82F0 /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
+		772C802627F88C2F00EA82F0 /* SurveyViewController-Deprecated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SurveyViewController-Deprecated.swift"; sourceTree = "<group>"; };
 		772C802B27F88FD300EA82F0 /* CookingModeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingModeCoordinator.swift; sourceTree = "<group>"; };
 		772C802D27F8900B00EA82F0 /* CookingModeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingModeController.swift; sourceTree = "<group>"; };
 		772C803027F896E100EA82F0 /* CareFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareFeedViewController.swift; sourceTree = "<group>"; };
-		772C803327F8979A00EA82F0 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		772C803527F898C700EA82F0 /* Surveys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surveys.swift; sourceTree = "<group>"; };
-		772C803727F89A4900EA82F0 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		772C803927F8A09500EA82F0 /* MealPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanViewController.swift; sourceTree = "<group>"; };
 		772C803B27F8A28600EA82F0 /* MealPlanViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		772C803F27F8D19400EA82F0 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		772C804327F9133E00EA82F0 /* RecipesViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		7744F76228001C56000DD45A /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77008F8628504EF400185D68 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				77008F8728504F1D00185D68 /* Tasks.swift */,
+				77008F8928504FFC00185D68 /* Logger.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		772C7FE327F8884300EA82F0 = {
 			isa = PBXGroup;
 			children = (
@@ -138,9 +155,13 @@
 				772C804327F9133E00EA82F0 /* RecipesViewControllerRepresentable.swift */,
 				772C803927F8A09500EA82F0 /* MealPlanViewController.swift */,
 				772C803B27F8A28600EA82F0 /* MealPlanViewControllerRepresentable.swift */,
+				7724421228518A5A0029B578 /* GroceryViewController.swift */,
+				7724420D28518A000029B578 /* GroceryViewControllerRepresentable.swift */,
 				772C803527F898C700EA82F0 /* Surveys.swift */,
-				772C803227F8978100EA82F0 /* Supporting Files */,
+				7744F76228001C56000DD45A /* SurveyViewController.swift */,
+				77008F9428505D0C00185D68 /* StoreModel.swift */,
 				772C7FF327F8884400EA82F0 /* Assets.xcassets */,
+				77008F8628504EF400185D68 /* Supporting Files */,
 				772C7FF527F8884400EA82F0 /* Preview Content */,
 				772C803E27F8CFFF00EA82F0 /* Deprecated */,
 				772C803D27F8CFB600EA82F0 /* Dump */,
@@ -172,15 +193,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		772C803227F8978100EA82F0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				772C803327F8979A00EA82F0 /* Tasks.swift */,
-				772C803727F89A4900EA82F0 /* Logger.swift */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		772C803D27F8CFB600EA82F0 /* Dump */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +210,7 @@
 				772C7FFF27F88A7E00EA82F0 /* ActiveTaskViewCoordinator.swift */,
 				772C800027F88A7E00EA82F0 /* MainView.swift */,
 				772C7FFE27F88A7E00EA82F0 /* SurveyViewCooordinator.swift */,
-				772C802627F88C2F00EA82F0 /* SurveyViewController.swift */,
+				772C802627F88C2F00EA82F0 /* SurveyViewController-Deprecated.swift */,
 				772C802427F88C2F00EA82F0 /* OnboardingViewCoordinator.swift */,
 				772C802027F88C2F00EA82F0 /* OnboardingViewController.swift */,
 			);
@@ -256,6 +268,8 @@
 				Base,
 			);
 			mainGroup = 772C7FE327F8884300EA82F0;
+			packageReferences = (
+			);
 			productRefGroup = 772C7FED27F8884300EA82F0 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -312,18 +326,22 @@
 				772C803627F898C700EA82F0 /* Surveys.swift in Sources */,
 				772C800427F88A7E00EA82F0 /* MainView.swift in Sources */,
 				772C803127F896E100EA82F0 /* CareFeedViewController.swift in Sources */,
+				77008F8828504F1D00185D68 /* Tasks.swift in Sources */,
 				772C7FF027F8884300EA82F0 /* Munch_App.swift in Sources */,
-				772C802A27F88C2F00EA82F0 /* SurveyViewController.swift in Sources */,
+				772C802A27F88C2F00EA82F0 /* SurveyViewController-Deprecated.swift in Sources */,
 				772C800127F88A7E00EA82F0 /* ActiveTaskViewController.swift in Sources */,
 				772C803C27F8A28600EA82F0 /* MealPlanViewControllerRepresentable.swift in Sources */,
 				772C802827F88C2F00EA82F0 /* OnboardingViewCoordinator.swift in Sources */,
-				772C803827F89A4900EA82F0 /* Logger.swift in Sources */,
 				772C802727F88C2F00EA82F0 /* OnboardingViewController.swift in Sources */,
-				772C803427F8979A00EA82F0 /* Tasks.swift in Sources */,
+				7744F76328001C56000DD45A /* SurveyViewController.swift in Sources */,
+				77008F9528505D0C00185D68 /* StoreModel.swift in Sources */,
+				77008F8A28504FFC00185D68 /* Logger.swift in Sources */,
 				772C800227F88A7E00EA82F0 /* SurveyViewCooordinator.swift in Sources */,
 				772C804027F8D19400EA82F0 /* RecipesViewController.swift in Sources */,
 				772C804427F9133E00EA82F0 /* RecipesViewControllerRepresentable.swift in Sources */,
 				772C800327F88A7E00EA82F0 /* ActiveTaskViewCoordinator.swift in Sources */,
+				7724421328518A5B0029B578 /* GroceryViewController.swift in Sources */,
+				7724420E28518A000029B578 /* GroceryViewControllerRepresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +486,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ade-studios.Munch-RKCK";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -497,6 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ade-studios.Munch-RKCK";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

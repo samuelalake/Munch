@@ -1,8 +1,8 @@
 //
-//  RecipesViewControllerRepresentable.swift
-//  Munch-RKCK
+//  GroceryViewRepresentable.swift
+//  Munch
 //
-//  Created by Samuel Alake on 4/2/22.
+//  Created by Samuel Alake on 6/8/22.
 //
 
 import Foundation
@@ -11,7 +11,7 @@ import UIKit
 import CareKitStore
 import CareKit
 
-struct RecipesViewControllerRepresentable: UIViewControllerRepresentable {
+struct GroceryViewControllerRepresentable: UIViewControllerRepresentable {
     
     typealias UIViewControllerType = UIViewController
         
@@ -26,7 +26,7 @@ struct RecipesViewControllerRepresentable: UIViewControllerRepresentable {
 //            )
 //        )
         
-        let vc = RecipesViewController(storeManager: storeManager)
+        let vc = GroceryViewController(storeManager: storeManager)
         return UINavigationController(rootViewController: vc)
     }
     

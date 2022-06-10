@@ -19,12 +19,15 @@ struct MealPlanViewControllerRepresentable: UIViewControllerRepresentable {
         
         func updateUIViewController(_ taskViewController: UIViewController, context: Context) {}
         func makeUIViewController(context: Context) -> UIViewController {
-            let storeManager = OCKSynchronizedStoreManager(
-                wrapping: OCKStore(
-                    name: "com.apple.wwdc.carekitstore",
-                    type: .inMemory
-                )
-            )
+           
+            let storeManager = StoreModel.shared.storeManager
+            
+//            let storeManager = OCKSynchronizedStoreManager(
+//                wrapping: OCKStore(
+//                    name: "com.apple.wwdc.carekitstore",
+//                    type: .inMemory
+//                )
+//            )
             
             let mealPlanSchedule = OCKSchedule.dailyAtTime(
                 hour: 8,
@@ -42,6 +45,7 @@ struct MealPlanViewControllerRepresentable: UIViewControllerRepresentable {
                 schedule: mealPlanSchedule
             )
             
+            //storeManager.synchronizedStoreManager
             storeManager.store.addAnyTasks([mealPlanTask], callbackQueue: .main) { result in
                 
                 switch result{
